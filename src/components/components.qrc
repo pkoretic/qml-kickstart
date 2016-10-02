@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/components">
+        <file>SwipeArea.qml</file>
+        <file>IconButton.qml</file>
+    </qresource>
+</RCC>

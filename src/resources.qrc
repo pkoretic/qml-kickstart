@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml-kickstart.qml</file>
+        <file>loader.qml</file>
+        <file>config.js</file>
+    </qresource>
+</RCC>

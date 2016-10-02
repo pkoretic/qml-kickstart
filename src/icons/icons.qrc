@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>Icon.qml</file>
+        <file>icons.ttf</file>
+        <file>codepoint.js</file>
+    </qresource>
+</RCC>
