@@ -1,6 +1,6 @@
 import QtQuick 2.7
 
-import "codepoint.js" as Code
+import "ionicons.js" as Code
 
 Text
 {

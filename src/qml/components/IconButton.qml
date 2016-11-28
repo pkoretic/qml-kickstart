@@ -1,7 +1,7 @@
 import QtQuick 2.7
 import QtQuick.Controls 2.0
 
-import "../icons"
+import "../../icons"
 
 Button
 {
@@ -13,7 +13,7 @@ Button
     implicitWidth: 50
     implicitHeight: 50
 
-    contentItem: Icon
+    contentItem: Ionicon
     {
         id: icon
         anchors.fill: parent

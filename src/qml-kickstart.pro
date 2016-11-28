@@ -1,15 +1,17 @@
-QT += qml quick quickcontrols2 websockets
+QT += qml quick quickcontrols2
 
 CONFIG += c++14
 
-SOURCES += main.cpp
-
-HEADERS += platform.h
-HEADERS += fileio.h
+SOURCES += cpp/main.cpp
+HEADERS += cpp/platform.h
+HEADERS += cpp/fileio.h
 
 RESOURCES += resources.qrc
+
+RESOURCES += qml/qml.qrc
+RESOURCES += qml/components/components.qrc
+
 RESOURCES += fonts/fonts.qrc
-RESOURCES += components/components.qrc
 RESOURCES += icons/icons.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
@@ -19,28 +21,27 @@ QML_IMPORT_PATH =
 include(deployment.pri)
 
 macx {
-    QMAKE_INFO_PLIST = ../../osx/Info.plist
+    QMAKE_INFO_PLIST = osx/Info.plist
+}
+
+ios {
+    QMAKE_INFO_PLIST = ios/Info.plist
+}
+
+android-g++ {
+    QT += androidextras
+    ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
+
+    DISTFILES += \
+        android/AndroidManifest.xml \
+        android/res/values/libs.xml
 }
 
 CONFIG(debug, debug|release) {
     message("debug mode")
     DEFINES += DEBUG
+    QT += websockets
 } else
 {
     message("release mode")
 }
-
-android-g++ {
-    QT += androidextras
-}
-
-DISTFILES += \
-    android/AndroidManifest.xml \
-    android/gradle/wrapper/gradle-wrapper.jar \
-    android/gradlew \
-    android/res/values/libs.xml \
-    android/build.gradle \
-    android/gradle/wrapper/gradle-wrapper.properties \
-    android/gradlew.bat
-
-ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android

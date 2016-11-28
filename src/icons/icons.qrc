@@ -1,7 +1,7 @@
 <RCC>
     <qresource prefix="/icons">
-        <file>Icon.qml</file>
-        <file>icons.ttf</file>
-        <file>codepoint.js</file>
+        <file>Ionicon.qml</file>
+        <file>ionicons.ttf</file>
+        <file>ionicons.js</file>
     </qresource>
 </RCC>

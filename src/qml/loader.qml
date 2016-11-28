@@ -5,7 +5,7 @@ import QtQuick.Window 2.2
 import QtWebSockets 1.0
 import Qt.labs.settings 1.0
 
-import "config.js" as Config
+import "../config.js" as Config
 
 ApplicationWindow
 {
@@ -59,14 +59,14 @@ ApplicationWindow
     // webfont icons | they have to be loaded before rest of qml
     FontLoader { source: "/fonts/Roboto-Regular.ttf" }
     FontLoader { source: "/fonts/Roboto-Light.ttf" }
-    FontLoader { source: "/icons/icons.ttf" }
+    FontLoader { source: "/icons/ionicons.ttf" }
 
     // main application content
     // in debug mode fetched from http, in production, builtin version is used
     Loader
     {
         id: loader
-        source: _DEBUG_MODE ? "%1/qml-kickstart.qml".arg(Config.api.url) : "qrc:/qml-kickstart.qml"
+        source: _DEBUG_MODE ? "%1/qml/main.qml".arg(Config.api.url) : "qrc:/qml/main.qml"
         anchors.fill: parent
         asynchronous: false
 

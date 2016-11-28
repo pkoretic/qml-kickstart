@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty("__platform", &platform);
 
     // load main file
-    engine.load(QUrl(QLatin1String("qrc:/loader.qml")));
+    engine.load(QUrl(QLatin1String("qrc:/qml/loader.qml")));
 
 
     // set debug mode as QML property

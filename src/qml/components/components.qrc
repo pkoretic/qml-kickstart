@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="/components">
+    <qresource prefix="/qml/components">
         <file>SwipeArea.qml</file>
         <file>IconButton.qml</file>
     </qresource>
