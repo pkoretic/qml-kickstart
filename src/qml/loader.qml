@@ -51,9 +51,6 @@ ApplicationWindow
     Settings
     {
         id: settings
-
-        property string username
-        property bool authorized: false
     }
 
     // webfont icons | they have to be loaded before rest of qml
