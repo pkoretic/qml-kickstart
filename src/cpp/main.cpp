@@ -22,7 +22,6 @@ int main(int argc, char *argv[])
     // load main file
     engine.load(QUrl(QLatin1String("qrc:/qml/loader.qml")));
 
-
     // set debug mode as QML property
 #ifdef DEBUG
     engine.rootObjects().first()->setProperty("_DEBUG_MODE", true);
