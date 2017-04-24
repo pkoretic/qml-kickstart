@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="/icons">
+    <qresource prefix="/ionicons">
         <file>Ionicon.qml</file>
         <file>ionicons.ttf</file>
         <file>ionicons.js</file>

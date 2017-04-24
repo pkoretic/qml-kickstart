@@ -12,7 +12,7 @@ RESOURCES += qml/qml.qrc
 RESOURCES += qml/components/components.qrc
 
 RESOURCES += fonts/fonts.qrc
-RESOURCES += icons/icons.qrc
+RESOURCES += ionicons/ionicons.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
