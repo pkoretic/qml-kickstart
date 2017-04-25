@@ -16,7 +16,7 @@ Rectangle
         anchors.centerIn: parent
         Label
         {
-            text: tr("Welcome to QML Kickstart!")
+            text: qsTr("Welcome to QML Kickstart!")
         }
 
         IconButton
