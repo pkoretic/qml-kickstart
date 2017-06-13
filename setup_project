@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+project_name=$1
+if [ -z project_name ]
+then
+    echo "usage: ./set_name <name of the project>"
+    echo "ie: ./set_name HelloWorld"
+    exit
+fi
+
+# always run from root dir
+cd -P -- "$(dirname -- "$0")" && pwd -P
+
+# rename .pro file if found
+# otherwise exit with information message
+project_file=src/qml-kickstart.pro
+if [ ! -f $project_file ]
+then
+    echo "Project file '$project-file' not found!"
+    echo "This script should be ran after a clean clone is done."
+    echo "If you haven't done any changes before running this script please file a bug report at
+    https://github.com/qaap/qml-kickstart/issues! Thanks!"
+fi
+
+mv $project_file src/$project_name.pro
